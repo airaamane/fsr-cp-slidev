@@ -40,6 +40,26 @@ How AI redefined what a software engineer is <b style="color:var(--ink)">for</b>
 -->
 
 ---
+title: "Your speaker"
+---
+
+<div class="h-full flex items-center" style="gap:3.4rem;">
+  <img src="/profile-photo.jpg" alt="Abdellah Iraamane" style="flex-shrink:0; width:232px; height:232px; border-radius:50%; object-fit:cover; border:1px solid var(--line); box-shadow:0 0 0 6px var(--bg), 0 0 0 7px var(--line);" />
+  <div>
+    <div class="eyebrow"><span class="i">//</span>&nbsp; your speaker</div>
+    <h1 style="margin-top:1rem; font-size:3rem;">Abdellah <span class="h-acc">Iraamane</span></h1>
+    <div style="font-size:1.25rem; color:var(--ink); margin-top:.9rem; font-family:'Space Grotesk'; font-weight:500;">Senior Software Engineer <span style="color:var(--faint);">·</span> <span style="color:var(--muted);">Microsoft</span></div>
+    <div style="font-size:.98rem; color:var(--muted); margin-top:.6rem;">Master IADO FSR <span style="color:var(--faint);">·</span> Promo 2015</div>
+    <div style="font-size:.98rem; color:var(--muted); margin-top:.2rem;">MSc Software Project Management <span style="color:var(--faint);">·</span> University of Sussex</div>
+    <div style="display:flex; gap:.7rem; margin-top:1.4rem;"><span class="chip" style="border-color:var(--agent); color:var(--agent);">Agentic AI</span><span class="chip" style="border-color:var(--agent); color:var(--agent);">Applied AI</span></div>
+  </div>
+</div>
+
+<!--
+**Who's talking:** Abdellah Iraamane — Senior Software Engineer at Microsoft, working on Agentic and Applied AI. A quick 30-second intro: what you build day-to-day, and why the shift from writing code to orchestrating it is something you live, not just study. Then bridge in: "I work on the systems this talk is about — so let's look at what the evidence actually says."
+-->
+
+---
 title: "The timeline"
 ---
 
