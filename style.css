@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ============================================================
+   FROM AUTHOR TO ORCHESTRATOR — design system
+   Color carries meaning, not decoration:
+     --human  amber  → the human: intent, judgment, productivity
+     --agent  cyan   → the machine: agents, automation, AI-driven gains
+     --warn   red    → genuinely negative outcomes: slower, decline, risk
+   ============================================================ */
+
+:root {
+  --bg:      #0b1120;
+  --bg-soft: #0e1626;
+  --panel:   #141e34;
+  --panel-2: #1b2744;
+  --line:    #26334f;
+  --ink:     #eef2fb;
+  --muted:   #93a0bd;
+  --faint:   #5e6c89;
+  --human:   #f4a259;
+  --agent:   #4fd6c4;
+  --warn:    #f1707e;
+}
+
+html, body, #app { background: var(--bg); }
+
+/* ---- base layout & type ---- */
+.slidev-layout {
+  background: var(--bg) !important;
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  padding: 2.6rem 3.4rem;
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.06;
+}
+.slidev-layout h1 { font-size: 3.1rem; }
+.slidev-layout h2 { font-size: 2.05rem; margin: 0; }
+.slidev-layout strong { color: var(--ink); font-weight: 600; }
+.slidev-layout a { color: var(--agent); text-decoration: none; }
+.slidev-layout p { line-height: 1.45; }
+
+/* ---- shared atoms ---- */
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.eyebrow .i { color: var(--human); }
+
+.takeaway {
+  font-size: 1.12rem;
+  color: var(--muted);
+  max-width: 52ch;
+  line-height: 1.5;
+}
+.takeaway b { color: var(--ink); font-weight: 600; }
+
+.src {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.66rem;
+  color: var(--faint);
+  letter-spacing: 0.03em;
+}
+
+.stat {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.92;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.chip {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.74rem;
+  padding: 0.3rem 0.66rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  background: var(--bg-soft);
+}
+
+.h-acc { color: var(--human); }
+.a-acc { color: var(--agent); }
+.w-acc { color: var(--warn); }
+
+/* a thin standard layout scaffold used on most slides */
+.scaffold { height: 100%; display: flex; flex-direction: column; }
+.scaffold .head { margin-bottom: 0.4rem; }
+.scaffold .body { flex: 1; display: flex; }
+.scaffold .foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; }
+
+/* slide number, default theme */
+.slidev-page { color: var(--faint); }
+
+/* ------------------------------------------------------------
+   SVG chart labels — slides 06 & 07
+   Slidev's UnoCSS attributify engine reads the SVG `font-size`
+   presentation attribute as a utility class (e.g. font-size="14"
+   -> 14 x 0.25rem = 3.5rem), which blows every chart label up ~4x
+   and makes them overlap. These higher-specificity rules out-rank
+   that utility and re-pin the intended sizes. Add a line here if a
+   chart starts using a new font-size value.
+   ------------------------------------------------------------ */
+.slidev-layout svg text[font-size="10"]   { font-size: 10px; }
+.slidev-layout svg text[font-size="10.5"] { font-size: 10.5px; }
+.slidev-layout svg text[font-size="11"]   { font-size: 11px; }
+.slidev-layout svg text[font-size="12"]   { font-size: 12px; }
+.slidev-layout svg text[font-size="14"]   { font-size: 14px; }
+.slidev-layout svg text[font-size="20"]   { font-size: 20px; }
+.slidev-layout svg text[font-size="22"]   { font-size: 22px; }
